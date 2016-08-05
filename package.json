@@ -1,0 +1,24 @@
+{
+  "name": "count-pixels",
+  "version": "1.0.0",
+  "description": "Count the number of pixels per color",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "istanbul cover node_modules/.bin/_mocha --report html --include-all-sources true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "get-pixels": "^3.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.4",
+    "mocha": "^3.0.1",
+    "mocha-cli": "^1.0.1",
+    "ndarray": "^1.0.18"
+  }
+}
