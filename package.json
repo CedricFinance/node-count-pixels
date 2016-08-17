@@ -5,9 +5,14 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha",
-    "coverage": "istanbul cover node_modules/.bin/_mocha --report html --include-all-sources true"
+    "coverage": "istanbul cover node_modules/.bin/_mocha --report html --include-all-sources true",
+    "coveralls": "istanbul cover node_modules/.bin/_mocha --report lcovonly --include-all-sources true && cat coverage/lcov.info | coveralls"
   },
-  "keywords": ["image", "pixels", "colors"],
+  "keywords": [
+    "image",
+    "pixels",
+    "colors"
+  ],
   "author": "Cédric Finance <cedric.finance@finandric.com>",
   "license": "ISC",
   "dependencies": {
@@ -17,6 +22,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "coveralls": "^2.11.12",
     "istanbul": "^0.4.4",
     "mocha": "^3.0.1",
     "mocha-cli": "^1.0.1",
