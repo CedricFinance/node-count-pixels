@@ -5,7 +5,9 @@ function countPixelsByColor(pixels) {
 
   for(let pixel of pixelsGenerator(pixels)) {
       const key = pixelToHex(pixel);
-      counts.hasOwnProperty(key) ? counts[key]++ : counts[key] = 1;
+      if (pixel[3] > 0) {
+        counts.hasOwnProperty(key) ? counts[key]++ : counts[key] = 1;
+      }
   }
 
   return counts;
