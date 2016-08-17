@@ -16,11 +16,10 @@ describe('utils', () => {
 
   describe('pixelsGenerator', () => {
     it('should produce pixels', () => {
-      const generator = pixelsGenerator(ndarray([1,2,3,4,5,6,7,8,9,10,11,12], [2,2,3]));
-      generator.next().value.should.deep.equal([1,2,3]);
-      generator.next().value.should.deep.equal([4,5,6]);
-      generator.next().value.should.deep.equal([7,8,9]);
-      generator.next().value.should.deep.equal([10,11,12]);
+      const generator = pixelsGenerator(ndarray([1,2,3,4,5,6,7,8,9,10,11,12], [1,3,4]));
+      generator.next().value.should.deep.equal([1,2,3,4]);
+      generator.next().value.should.deep.equal([5,6,7,8]);
+      generator.next().value.should.deep.equal([9,10,11,12]);
     })
   });
 

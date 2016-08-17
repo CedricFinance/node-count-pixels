@@ -11,13 +11,13 @@ function* pixelsGenerator(pixels) {
 
   for(x = 0; x < pixels.shape[0]; x++) {
     for(y = 0; y < pixels.shape[1]; y++) {
-      yield [0,1,2].map(c => pixels.get(x, y, c));
+      yield [0,1,2,3].map(c => pixels.get(x, y, c));
     }
   }
 }
 
 function pixelToHex(pixel) {
-  return "#"+pixel.map(decimalToHex).join('');
+  return "#"+pixel.slice(0,3).map(decimalToHex).join('');
 }
 
 module.exports = {
