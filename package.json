@@ -7,8 +7,8 @@
     "test": "mocha",
     "coverage": "istanbul cover node_modules/.bin/_mocha --report html --include-all-sources true"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["image", "pixels", "colors"],
+  "author": "Cédric Finance <cedric.finance@finandric.com>",
   "license": "ISC",
   "dependencies": {
     "bluebird": "^3.4.1",
